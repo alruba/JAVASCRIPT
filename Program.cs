@@ -55,7 +55,6 @@ namespace Chicago_Crime_Data
                 }
             }
             sr.Dispose();
-            sw.Flush();
             sw.Write("[");                   //writing first json file
             for (int p = 1; p < 17; p++)
             {
@@ -76,7 +75,7 @@ namespace Chicago_Crime_Data
             sw2.Write("]");
             sw2.Flush();                     
            string json3 = JsonConvert.SerializeObject(robberyDictionary, Formatting.Indented);
-            sw3.Write(json3);                      //writing third json file
+                          //writing third json file
             sw3.Flush();
         }
     }
