@@ -1,0 +1,84 @@
+﻿{
+  "Statistics1": [
+    {
+      "YEAR": 2001,
+      "NumberOfRobbery": 18330,
+      "NumberOfBurglary": 45913
+    },
+    {
+      "YEAR": 2002,
+      "NumberOfRobbery": 18397,
+      "NumberOfBurglary": 45763
+    },
+    {
+      "YEAR": 2003,
+      "NumberOfRobbery": 17205,
+      "NumberOfBurglary": 44300
+    },
+    {
+      "YEAR": 2004,
+      "NumberOfRobbery": 15834,
+      "NumberOfBurglary": 43983
+    },
+    {
+      "YEAR": 2005,
+      "NumberOfRobbery": 15879,
+      "NumberOfBurglary": 41311
+    },
+    {
+      "YEAR": 2006,
+      "NumberOfRobbery": 15829,
+      "NumberOfBurglary": 41036
+    },
+    {
+      "YEAR": 2007,
+      "NumberOfRobbery": 15324,
+      "NumberOfBurglary": 40072
+    },
+    {
+      "YEAR": 2008,
+      "NumberOfRobbery": 16565,
+      "NumberOfBurglary": 39923
+    },
+    {
+      "YEAR": 2009,
+      "NumberOfRobbery": 15866,
+      "NumberOfBurglary": 36605
+    },
+    {
+      "YEAR": 2010,
+      "NumberOfRobbery": 14159,
+      "NumberOfBurglary": 34626
+    },
+    {
+      "YEAR": 2011,
+      "NumberOfRobbery": 13902,
+      "NumberOfBurglary": 32351
+    },
+    {
+      "YEAR": 2012,
+      "NumberOfRobbery": 13421,
+      "NumberOfBurglary": 31334
+    },
+    {
+      "YEAR": 2013,
+      "NumberOfRobbery": 11762,
+      "NumberOfBurglary": 28011
+    },
+    {
+      "YEAR": 2014,
+      "NumberOfRobbery": 9745,
+      "NumberOfBurglary": 25502
+    },
+    {
+      "YEAR": 2015,
+      "NumberOfRobbery": 9608,
+      "NumberOfBurglary": 24650
+    },
+    {
+      "YEAR": 2016,
+      "NumberOfRobbery": 3029,
+      "NumberOfBurglary": 27026
+    }
+  ]
+}

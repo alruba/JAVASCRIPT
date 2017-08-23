@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Droid+Sans%7CDroid+Sans+Mono);
+
+        .slice text {
+            font-family: Droid Sans;
+        }
+        #para {
+            text-align: center;
+            font-size: 40px;
+        }
+    </style>
+
+    </head>
+<body>
+    <p id="para">Types of Robbery</p>
+ <div id="chart"></div>   
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+    var w = 1200;
+    var h = 1200;
+    var r = h / 2;
+    var aColor = d3.scale.category20c();
+
+
+    function draw(data) {
+
+        var data = data;
+    
+        var vis = d3.select('#chart').append("svg:svg").data([data]).attr("width", w).attr("height", h).append("svg:g").attr("transform", "translate(" + r + "," + r + ")");
+
+        var pie = d3.layout.pie().value(function (d) { return d.value; });
+
+        // Declare an arc generator function
+        var arc = d3.svg.arc().outerRadius(300);
+
+        // Select paths, use arc generator to draw
+        var arcs = vis.selectAll("g.slice").data(pie).enter().append("svg:g").attr("class", "slice");
+        arcs.append("svg:path")
+            .attr("fill", function (d, i) {
+                return aColor(i);
+            })
+            .attr("d", function (d) { return arc(d); })
+            ;
+
+        // Add the text
+        arcs.append("svg:text")
+            .attr("transform", function (d) {
+                d.innerRadius = 500; /* Distance of label to the center*/
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ") rotate(-75)";
+            }
+            )
+            .attr("text-anchor", "middle")
+            .text(function (d, i) { return data[i].label; })
+            .style("font-size", "12px");      //To change the font
+
+
+    }
+            d3.json("../JSON/json3.json", function (error, data) {
+        if (error) throw error;
+
+        // trigger render
+        draw(data);
+                               });
+</script>
+    </body>
+</html>
+

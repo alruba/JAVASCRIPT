@@ -1,0 +1,98 @@
+﻿ [
+    {
+      "YEAR": 2001,
+      "CriminalDamagedonetoProperty": 27147,
+      "CriminalDamagedonetoVehicle": 27003,
+      "CriminalDamagedonetoStateSupProperty": 550
+    },
+    {
+      "YEAR": 2002,
+      "CriminalDamagedonetoProperty": 26328,
+      "CriminalDamagedonetoVehicle": 26794,
+      "CriminalDamagedonetoStateSupProperty": 534
+    },
+    {
+      "YEAR": 2003,
+      "CriminalDamagedonetoProperty": 24412,
+      "CriminalDamagedonetoVehicle": 26543,
+      "CriminalDamagedonetoStateSupProperty": 494
+    },
+    {
+      "YEAR": 2004,
+      "CriminalDamagedonetoProperty": 24157,
+      "CriminalDamagedonetoVehicle": 25020,
+      "CriminalDamagedonetoStateSupProperty": 383
+    },
+    {
+      "YEAR": 2005,
+      "CriminalDamagedonetoProperty": 24547,
+      "CriminalDamagedonetoVehicle": 25601,
+      "CriminalDamagedonetoStateSupProperty": 334
+    },
+    {
+      "YEAR": 2006,
+      "CriminalDamagedonetoProperty": 25149,
+      "CriminalDamagedonetoVehicle": 25948,
+      "CriminalDamagedonetoStateSupProperty": 307
+    },
+    {
+      "YEAR": 2007,
+      "CriminalDamagedonetoProperty": 23606,
+      "CriminalDamagedonetoVehicle": 24226,
+      "CriminalDamagedonetoStateSupProperty": 253
+    },
+    {
+      "YEAR": 2008,
+      "CriminalDamagedonetoProperty": 22993,
+      "CriminalDamagedonetoVehicle": 24918,
+      "CriminalDamagedonetoStateSupProperty": 229
+    },
+    {
+      "YEAR": 2009,
+      "CriminalDamagedonetoProperty": 20822,
+      "CriminalDamagedonetoVehicle": 21834,
+      "CriminalDamagedonetoStateSupProperty": 193
+    },
+    {
+      "YEAR": 2010,
+      "CriminalDamagedonetoProperty": 17864,
+      "CriminalDamagedonetoVehicle": 18787,
+      "CriminalDamagedonetoStateSupProperty": 170
+    },
+    {
+      "YEAR": 2011,
+      "CriminalDamagedonetoProperty": 16889,
+      "CriminalDamagedonetoVehicle": 16896,
+      "CriminalDamagedonetoStateSupProperty": 143
+    },
+    {
+      "YEAR": 2012,
+      "CriminalDamagedonetoProperty": 16350,
+      "CriminalDamagedonetoVehicle": 16429,
+      "CriminalDamagedonetoStateSupProperty": 164
+    },
+    {
+      "YEAR": 2013,
+      "CriminalDamagedonetoProperty": 14124,
+      "CriminalDamagedonetoVehicle": 13783,
+      "CriminalDamagedonetoStateSupProperty": 142
+    },
+    {
+      "YEAR": 2014,
+      "CriminalDamagedonetoProperty": 12766,
+      "CriminalDamagedonetoVehicle": 12634,
+      "CriminalDamagedonetoStateSupProperty": 133
+    },
+    {
+      "YEAR": 2015,
+      "CriminalDamagedonetoProperty": 13188,
+      "CriminalDamagedonetoVehicle": 13586,
+      "CriminalDamagedonetoStateSupProperty": 127
+    },
+    {
+      "YEAR": 2016,
+      "CriminalDamagedonetoProperty": 3985,
+      "CriminalDamagedonetoVehicle": 4084,
+      "CriminalDamagedonetoStateSupProperty": 33
+    }
+  ]
