@@ -21,7 +21,7 @@ namespace Chicago_Crime_Data
             String[] Header = { "YEAR", "No. of Robbery", "No. of Burglary", "Criminal Damage done to Property", "Criminal Damage done to Vehicle", "Criminal Damage done to State Sup Property" };
             String[] data = sr.ReadLine().ToString().Split(','); 
             int[] NRobPY = new int[17], NBurgPY = new int[17], CDProp = new int[17], CDVeh = new int[17], CDStProp = new int[17];
-            int x = 0, k = 5; ;
+            int x = 0, k = 5; 
             Dictionary<String, int> robberyDictionary = new Dictionary<String, int>();           
             while (!sr.EndOfStream)
             {
