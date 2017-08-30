@@ -20,19 +20,19 @@ namespace Chicago_Crime_Data
             StreamWriter sw3 = new StreamWriter(fileStreamwriter3);
             String[] Header = { "YEAR", "No. of Robbery", "No. of Burglary", "Criminal Damage done to Property", "Criminal Damage done to Vehicle", "Criminal Damage done to State Sup Property" };
             String[] data = sr.ReadLine().ToString().Split(','); 
-            int[] NRobPY = new int[17], NBurgPY = new int[17], CDProp = new int[17], CDVeh = new int[17], CDStProp = new int[17];
+            int[] nRobPY = new int[17], nBurgPY = new int[17], cDProp = new int[17], cDVeh = new int[17], cDStProp = new int[17];
             int x = 0, k = 5; 
             Dictionary<String, int> robberyDictionary = new Dictionary<String, int>();           
-            while (!sr.EndOfStream)
+            while (!sr.EndOfStream)                        //Reading the csv file of Chicago Crime Data
             {
                 String[] data2 = sr.ReadLine().ToString().Split(',');
                 Int32 a;
-                if (Int32.TryParse(data2[17], out a))
+                if (Int32.TryParse(data2[17], out a))              //Converting string (Year) to Integer format
                     if (a >= 2001 && a <= 2016)
                     {
-                        x = a % 2000;
+                        x = a % 2000;                             //Extracting last digit of each year. For example, '1' of '2001'.
                         //FIRST_FILTER
-                        int n = (data[5] == "Primary Type" && data2[5] == "ROBBERY") ? NRobPY[x] += 1 : NBurgPY[x] += 1;
+                        int n = (data[5] == "Primary Type" && data2[5] == "ROBBERY") ? nRobPY[x] += 1 : nBurgPY[x] += 1;
                         //SECOND_FILTER
                         int m = (data[5] == "Primary Type" && data2[5] == "CRIMINAL DAMAGE" && data[6] == "Description" && data2[6] == "TO PROPERTY") ? CDProp[x] = CDProp[x] + 1 : ((data[5] == "Primary Type" && data2[5] == "CRIMINAL DAMAGE" && data[6] == "Description" && data2[6] == "TO VEHICLE") ? CDVeh[x] = CDVeh[x] + 1 : ((data[5] == "Primary Type" && data2[5] == "CRIMINAL DAMAGE" && data[6] == "Description" && data2[6] == "TO STATE SUP PROP") ? CDStProp[x] = CDStProp[x] + 1 : 0));
                     }
@@ -58,7 +58,7 @@ namespace Chicago_Crime_Data
             sw.Write("[");                   //writing first json file
             for (int p = 1; p < 17; p++)
             {
-                sw.Write("\n"+"{" + "\"" + Header[0] + "\"" + ":" + (2000 + p) + "," + "\n" + Header[1] + "\"" + ":" + NRobPY[p] + "," + "\n"+"\"" +Header[2]+"\""+":"+NBurgPY[p]+"}" );
+                sw.Write("\n"+"{" + "\"" + Header[0] + "\"" + ":" + (2000 + p) + "," + "\n" + Header[1] + "\"" + ":" + nRobPY[p] + "," + "\n"+"\"" +Header[2]+"\""+":"+nBurgPY[p]+"}" );
                 if (p < 16)
                     sw.Write(",");
             }
@@ -68,14 +68,14 @@ namespace Chicago_Crime_Data
             sw2.Write("[");
             for (int q = 1; q < 17; q++)
             {
-                sw2.Write("\n" + "{" + "\"" + Header[0] + "\"" + ":" + (2000 + q) + "," + "\n" + Header[3] + "\"" + ":" + CDProp[q] + "," + "\n" + "\"" + Header[4] + "\"" + ":" + CDVeh[q] + "," + "\n" + "\"" + Header[5] + "\"" + ":" + CDStProp[q] + "}");
+                sw2.Write("\n" + "{" + "\"" + Header[0] + "\"" + ":" + (2000 + q) + "," + "\n" + Header[3] + "\"" + ":" + cDProp[q] + "," + "\n" + "\"" + Header[4] + "\"" + ":" + cDVeh[q] + "," + "\n" + "\"" + Header[5] + "\"" + ":" + cDStProp[q] + "}");
                 if (q < 16)
                     sw2.Write(",");
             }
             sw2.Write("]");
             sw2.Flush();                     
            string json3 = JsonConvert.SerializeObject(robberyDictionary, Formatting.Indented);
-                          //writing third json file
+           sw3.WriteLine(json3);               //writing third json file
             sw3.Flush();
         }
     }
